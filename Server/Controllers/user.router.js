@@ -112,9 +112,9 @@ userRouter.get("/logout", async (req, res) => {
   }
 });
 
-userRouter.get("/get-otp", async (req, res) => {
+userRouter.post("/get-otp", async (req, res) => {
   try {
-    const { email, name } = req.body;
+    const { email } = req.body;
     console.log(req.body);
     const user = await UserModel.findOne({ email });
     if (!user) {
@@ -127,7 +127,7 @@ userRouter.get("/get-otp", async (req, res) => {
         name: "Full Auth Flow",
         email: "noreply@example.com",
       };
-      sendSmtpEmail.to = [{ email, name: name }];
+      sendSmtpEmail.to = [{ email }];
       sendSmtpEmail.replyTo = {
         email: "noreply@example.com",
         name: "Blogs App",
@@ -144,12 +144,15 @@ userRouter.get("/get-otp", async (req, res) => {
           });
           console.log(otpToken);
           console.log(otp);
-          res.cookie("otpToken", otpToken, { maxAge: 1000 * 60 * 10 });
-          res
-            .status(200)
-            .send(
-              "OTP sent Successfully to your Email. Kindly check your email"
-            );
+          res.cookie("otpToken", otpToken, {
+            maxAge: 1000 * 60 * 10,
+            httpOnly: true,
+            sameSite: "none",
+            secure: true,
+          });
+          res.status(200).send({
+            msg: "OTP sent Successfully to your Email. Kindly check your email",
+          });
         },
         function (error) {
           res.status(500).send({ error: error.message });

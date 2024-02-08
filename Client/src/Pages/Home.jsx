@@ -11,7 +11,7 @@ import LeftSection from "../Components/LeftSection";
 import RightSection from "../Components/RightSection";
 import FirstSection from "../Components/FirstSection";
 import Footer from "../Components/Footer";
-
+import DefaultProducts from "../Components/DefaultProducts";
 const Home = () => {
   return (
     <Box bg="ternary">
@@ -27,6 +27,7 @@ const Home = () => {
           <RightSection />
         </Flex>
         <FirstSection />
+        <DefaultProducts />
       </Container>
       <Footer />
     </Box>

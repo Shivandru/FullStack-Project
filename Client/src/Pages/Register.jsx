@@ -13,6 +13,7 @@ import {
   Text,
   useColorModeValue,
   Link,
+  useToast,
 } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
 import { ViewIcon, ViewOffIcon } from "@chakra-ui/icons";
@@ -20,6 +21,7 @@ import background from "../assets/jd-Assets/background.png";
 const Register = () => {
   const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
+  const toast = useToast();
   const [formState, setFormState] = useState({
     name: "",
     email: "",
@@ -43,6 +45,23 @@ const Register = () => {
       });
       const data = await res.json();
       console.log(data);
+      if (data.msg === "User created successfully") {
+        toast({
+          title: "Account created.",
+          description: "We've created your account.",
+          status: "success",
+          duration: 9000,
+          isClosable: true,
+        });
+      } else {
+        toast({
+          title: "Invalid Credential",
+          description: "Please enter valid user details",
+          status: "error",
+          duration: 9000,
+          isClosable: true,
+        });
+      }
     } catch (error) {
       console.log(error.message);
     }
@@ -54,7 +73,7 @@ const Register = () => {
       bgPosition="center"
       bgRepeat="no-repeat"
       h="100vh"
-      w="100vw"
+      w="100%"
     >
       <Flex
         minH={"100vh"}

@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useContext } from "react";
 import {
   Box,
   Flex,
@@ -8,19 +8,53 @@ import {
   useDisclosure,
   Stack,
   Link,
+  useToast,
 } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
 import { HamburgerIcon, CloseIcon, ChevronDownIcon } from "@chakra-ui/icons";
 import MenuComponent from "../Sub-Components/Menu";
 import DrawerComponent from "../Sub-Components/DrawerComponent";
-import Login from "../Pages/Login";
-// import AllRoutes from "./AllRoutes";
-import { Routes, Route } from "react-router-dom";
+import { AuthContext } from "../Auth/AuthContextProvider";
 function Navbar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const navigate = useNavigate();
   const btnRef = useRef();
+  const toast = useToast();
+  const { isLoggedIn, setIsLoggedIn } = useContext(AuthContext);
+  async function handleLogout() {
+    try {
+      const res = await fetch(`http://localhost:3000/user/logout`, {
+        method: "GET",
+        credentials: "include",
+        mode: "cors",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+      let data = await res.json();
+      if (data.msg === "User logged out successfully" && isLoggedIn) {
+        setIsLoggedIn(false);
+        toast({
+          title: "Logged Out",
+          description: "You Logged out successfully",
+          status: "success",
+          duration: 9000,
+          isClosable: true,
+        });
+      } else {
+        toast({
+          title: "Error",
+          description: "Something went wrong",
+          status: "error",
+          duration: 9000,
+          isClosable: true,
+        });
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  }
   return (
     <>
       <Box bg="#A0AEC0">
@@ -171,8 +205,9 @@ function Navbar() {
                   color: "primary",
                 }}
                 textDecoration="none"
+                onClick={handleLogout}
               >
-                Website Accessibility
+                Log Out
               </Link>
             </HStack>
           </HStack>
