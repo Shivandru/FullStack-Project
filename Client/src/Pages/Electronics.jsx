@@ -1,8 +1,16 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { Box, Flex, Image, Text, Button } from "@chakra-ui/react";
 import ReactStars from "react-rating-stars-component";
+import { AuthContext } from "../Auth/AuthContextProvider";
+import { useNavigate } from "react-router-dom";
 const Electronics = () => {
   const [electronicData, setElectronicData] = useState([]);
+  const { isLoggedIn, setIsLoggedIn } = useContext(AuthContext);
+  const navigate = useNavigate();
+
+  if (!isLoggedIn) {
+    navigate("/login");
+  }
   async function getData() {
     try {
       let res = await fetch(`http://localhost:3000/products/electronics`, {
@@ -10,9 +18,12 @@ const Electronics = () => {
         headers: {
           "Content-Type": "application/json",
         },
+        mode: "cors",
+        credentials: "include",
       });
       let data = await res.json();
       setElectronicData(data);
+      console.log(electronicData);
     } catch (error) {
       console.log(error.message);
     }
@@ -25,8 +36,12 @@ const Electronics = () => {
     <>
       <Box>
         <Flex wrap={"wrap"} justifyContent={"space-around"} gap="1rem">
-          {electronicData.map((ele) => (
-            <Box key={ele._id} p="1rem" boxShadow="rgba(100, 100, 111, 0.2) 0px 7px 29px 0px">
+          {electronicData?.map((ele) => (
+            <Box
+              key={ele._id}
+              p="1rem"
+              boxShadow="rgba(100, 100, 111, 0.2) 0px 7px 29px 0px"
+            >
               <Image src={ele.poster} alt="electronicLogo" w="15rem" />
               <Text fontSize={"0.8rem"}>{ele.appliance_name}</Text>
               <Text fontSize={"0.8rem"}>{ele.power_consumption} watt</Text>

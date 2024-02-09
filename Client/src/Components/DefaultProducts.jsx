@@ -20,7 +20,6 @@ const DefaultProducts = () => {
     fetchData();
   }, []);
 
-
   return (
     <>
       <Heading textAlign={"center"}>Recommended For You</Heading>
@@ -35,7 +34,7 @@ const DefaultProducts = () => {
           <Box
             key={ele._id}
             p="1.5rem"
-            h="auto"
+            h="32rem"
             w="15rem"
             mt="3rem"
             mb="1rem"
@@ -80,6 +79,7 @@ const DefaultProducts = () => {
               bg="primary"
               position="absolute"
               bottom="0rem"
+              mb="1rem"
               onClick={() => addItem(ele)}
             >
               Add To Cart

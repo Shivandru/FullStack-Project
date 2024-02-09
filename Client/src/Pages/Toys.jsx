@@ -10,6 +10,8 @@ const Toys = () => {
         headers: {
           "Content-Type": "application/json",
         },
+        mode: "cors",
+        credentials: "include",
       });
       const data = await res.json();
       setToyData(data);
@@ -25,7 +27,7 @@ const Toys = () => {
     <>
       <Box>
         <Flex wrap={"wrap"} justifyContent={"space-around"} gap="1rem" w="100%">
-          {toysData.map((ele) => (
+          {toysData?.map((ele) => (
             <Box key={ele._id} p="1rem">
               <Image src={ele.poster} alt="toysLogo" w="10rem" />
               <Text fontSize={"0.8rem"}>age range: {ele.toy_age_range}</Text>

@@ -55,6 +55,7 @@ function Navbar() {
       console.log(error);
     }
   }
+
   return (
     <>
       <Box bg="#A0AEC0">

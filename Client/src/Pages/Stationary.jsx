@@ -10,6 +10,8 @@ const Stationary = () => {
         headers: {
           "Content-Type": "application/json",
         },
+        mode: "cors",
+        credentials: "include",
       });
       let data = await res.json();
       setStationaryData(data);
@@ -25,7 +27,7 @@ const Stationary = () => {
     <>
       <Box>
         <Flex wrap={"wrap"} justifyContent={"space-around"} gap="1rem">
-          {stationayData.map((ele) => (
+          {stationayData?.map((ele) => (
             <Box
               key={ele._id}
               p="1rem"
