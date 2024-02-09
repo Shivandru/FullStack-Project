@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Box, Flex, Image, Text, Button } from "@chakra-ui/react";
 import ReactStars from "react-rating-stars-component";
+import { useNavigate } from "react-router-dom";
 const Grocery = () => {
   const [groceryData, setGroceryData] = useState([]);
   async function getData() {
@@ -10,6 +11,8 @@ const Grocery = () => {
         headers: {
           "Content-Type": "application/json",
         },
+        mode: "cors",
+        credentials: "include",
       });
       let data = await res.json();
       setGroceryData(data);
@@ -25,7 +28,7 @@ const Grocery = () => {
     <>
       <Box>
         <Flex wrap={"wrap"} justifyContent={"space-around"} gap="1rem">
-          {groceryData.map((ele) => (
+          {groceryData?.map((ele) => (
             <Box
               key={ele._id}
               p="1rem"

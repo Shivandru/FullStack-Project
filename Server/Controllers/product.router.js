@@ -16,9 +16,8 @@ productRouter.get("/", async (req, res) => {
     res.status(500).send({ msg: error.message });
   }
 });
-// productRouter.use(auth);
 
-productRouter.get("/cloths", async (req, res) => {
+productRouter.get("/cloths", auth, async (req, res) => {
   try {
     const cloths = await ClothModel.find();
     res.status(200).send(cloths);
@@ -27,7 +26,7 @@ productRouter.get("/cloths", async (req, res) => {
   }
 });
 
-productRouter.get("/toys", async (req, res) => {
+productRouter.get("/toys", auth, async (req, res) => {
   try {
     const toys = await ToysModel.find();
     res.status(200).send(toys);
@@ -35,7 +34,7 @@ productRouter.get("/toys", async (req, res) => {
     res.status(500).send({ msg: error.message });
   }
 });
-productRouter.get("/electronics", async (req, res) => {
+productRouter.get("/electronics", auth, async (req, res) => {
   try {
     const electronics = await ElectronicModel.find();
     res.status(200).send(electronics);
@@ -43,7 +42,7 @@ productRouter.get("/electronics", async (req, res) => {
     res.status(500).send({ msg: error.message });
   }
 });
-productRouter.get("/grocery", async (req, res) => {
+productRouter.get("/grocery", auth, async (req, res) => {
   try {
     const food = await GroceryModel.find();
     res.status(200).send(food);
@@ -51,7 +50,7 @@ productRouter.get("/grocery", async (req, res) => {
     res.status(500).send({ msg: error.message });
   }
 });
-productRouter.get("/stationary", async (req, res) => {
+productRouter.get("/stationary", auth, async (req, res) => {
   try {
     const stationary = await StationaryModel.find();
     res.status(200).send(stationary);

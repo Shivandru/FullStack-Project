@@ -6,6 +6,7 @@ const { BlackListModel } = require("../Models/blacklist.models");
 
 async function auth(req, res, next) {
   const { accessToken, refreshToken } = req.cookies;
+  console.log(accessToken, refreshToken);
   try {
     const blacklist = await BlackListModel.findOne({ token: accessToken });
     if (blacklist) {
@@ -31,7 +32,7 @@ async function auth(req, res, next) {
               console.log(newToken);
               next();
             } else {
-              res.status(400).send({ msg: `Please Login Again` });
+              res.status(400).send({ msg: `Please Login Again...` });
             }
           });
         }

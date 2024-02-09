@@ -1,11 +1,18 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { Box, Flex, Text, Image, Button } from "@chakra-ui/react";
 import ReactStars from "react-rating-stars-component";
 import CartSection from "../Components/CartSection";
 import { useCart } from "react-use-cart";
+import { useNavigate } from "react-router-dom";
+import { AuthContext } from "../Auth/AuthContextProvider";
 const Cloths = () => {
   const [clothsData, setClothsData] = useState([]);
   const { addItem } = useCart();
+  const navigate = useNavigate();
+  const { isLoggedIn } = useContext(AuthContext);
+  if (!isLoggedIn) {
+    navigate("/login");
+  }
   async function getData() {
     try {
       let res = await fetch(`http://localhost:3000/products/cloths`, {
@@ -13,6 +20,8 @@ const Cloths = () => {
         headers: {
           "Content-Type": "application/json",
         },
+        mode: "cors",
+        credentials: "include",
       });
       let data = await res.json();
       setClothsData(data);
