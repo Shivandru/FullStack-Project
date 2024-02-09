@@ -20,7 +20,9 @@ app.use(
 
 app.use("/user", userRouter);
 app.use("/products", productRouter);
-
+app.get("/", (req, res) => {
+  res.send("Home Page");
+});
 app.listen(port, async () => {
   try {
     await connection;
