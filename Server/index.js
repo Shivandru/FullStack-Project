@@ -15,13 +15,13 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
   cors({
-    origin: "http://127.0.0.1:5173",
+    origin: "https://jdclone-shivandrus-projects.vercel.app",
     credentials: true,
     httpOnly: true,
   })
 );
 const scopes = ["https://www.googleapis.com/auth/userinfo.email"];
-const redirectUrl = "http://localhost:3000/auth/google/callback";
+const redirectUrl = "https://server-55n8.onrender.com/auth/google/callback";
 app.use("/user", userRouter);
 app.use("/products", productRouter);
 app.get("/", (req, res) => {
@@ -49,7 +49,7 @@ app.get("/auth/google/callback", async (req, res) => {
     req.googleEmail = email;
     console.log(tokens.access_token);
     // res.send({ tokens, email });
-    res.redirect("http://127.0.0.1:5173");
+    res.redirect("https://jdclone-shivandrus-projects.vercel.app");
   } catch (error) {
     console.error("Error exchanging code for tokens:", error);
     res.status(500).send("Error occurred during authentication");
