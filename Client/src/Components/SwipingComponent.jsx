@@ -11,17 +11,14 @@ import NavSection from "./NavSection";
 import { Box } from "@chakra-ui/react";
 function SwipingComponent() {
   return (
-    <Box w={{ base: "100%", md: "50%" }}
-    bg="ternary"
-    zIndex="1"
-    padding="1rem">
+    <Box w={{ base: "100%", md: "50%" }} bg="ternary" zIndex="1" padding="1rem">
       <NavSection />
       <Swiper
         spaceBetween={30}
-        // autoplay={{
-        //   delay: 2500,
-        //   disableOnInteraction: false,
-        // }}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
         loop={true}
         pagination={{
           clickable: true,

@@ -34,15 +34,18 @@ const Register = () => {
     try {
       e.preventDefault();
       console.log(formState);
-      const res = await fetch(`http://localhost:3000/user/register`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formState),
-        credentials: "include",
-        mode: "cors",
-      });
+      const res = await fetch(
+        `https://server-55n8.onrender.com/user/register`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formState),
+          credentials: "include",
+          mode: "cors",
+        }
+      );
       const data = await res.json();
       console.log(data);
       if (data.msg === "User created successfully") {

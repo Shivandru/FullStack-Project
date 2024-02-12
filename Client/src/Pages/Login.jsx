@@ -13,6 +13,8 @@ import {
   useColorModeValue,
   Link,
   useToast,
+  Image,
+  Text,
 } from "@chakra-ui/react";
 import { ViewIcon, ViewOffIcon } from "@chakra-ui/icons";
 import background from "../assets/jd-Assets/background.png";
@@ -30,7 +32,7 @@ const Login = () => {
   async function handleSubmit(e) {
     try {
       e.preventDefault();
-      const res = await fetch(`http://localhost:3000/user/login`, {
+      const res = await fetch(`https://server-55n8.onrender.com/user/login`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -150,6 +152,27 @@ const Login = () => {
                   >
                     Login
                   </Button>
+                  <Link
+                    loadingText="Submitting"
+                    size="lg"
+                    bg={"blue.400"}
+                    color={"white"}
+                    _hover={{
+                      bg: "blue.500",
+                    }}
+                    p="0.75rem"
+                    href="https://server-55n8.onrender.com/login"
+                  >
+                    <Flex align={"center"}>
+                      <Image
+                        src="https://cdn-icons-png.flaticon.com/128/300/300221.png"
+                        w="2rem"
+                      />
+                      <Text fontSize={"0.8rem"} pl="0.5rem">
+                        Continue with google
+                      </Text>
+                    </Flex>
+                  </Link>
                   <Link
                     textAlign={"center"}
                     onClick={() => navigate("/resetpassword")}

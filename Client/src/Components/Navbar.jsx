@@ -24,7 +24,7 @@ function Navbar() {
   const { isLoggedIn, setIsLoggedIn } = useContext(AuthContext);
   async function handleLogout() {
     try {
-      const res = await fetch(`http://localhost:3000/user/logout`, {
+      const res = await fetch(`https://server-55n8.onrender.com/user/logout`, {
         method: "GET",
         credentials: "include",
         mode: "cors",
@@ -73,8 +73,18 @@ function Navbar() {
                 w="1rem"
                 h="1rem"
                 mr="0.5rem"
-              />{" "}
-              overseas
+              />
+              <Link
+                fontSize="0.8rem"
+                _hover={{
+                  color: "primary",
+                }}
+                textDecoration="none"
+                to="/login"
+                onClick={() => navigate("/")}
+              >
+                Home
+              </Link>
             </Flex>
             <HStack
               // border="1px solid black"
@@ -89,9 +99,9 @@ function Navbar() {
                 }}
                 textDecoration="none"
                 to="/login"
-                onClick={() => navigate("/")}
+                onClick={() => navigate("/register")}
               >
-                Home
+                Register
               </Link>
               <Link
                 fontSize="0.8rem"
@@ -99,6 +109,7 @@ function Navbar() {
                   color: "primary",
                 }}
                 textDecoration="none"
+                onClick={() => navigate("/orders")}
               >
                 | My Orders
               </Link>

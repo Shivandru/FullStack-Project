@@ -28,7 +28,7 @@ const ForgotPassword = () => {
     try {
       e.preventDefault();
       console.log(userData);
-      const res = await fetch(`http://localhost:3000/user/get-otp`, {
+      const res = await fetch(`https://server-55n8.onrender.com/user/get-otp`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(userData),
@@ -76,7 +76,7 @@ const ForgotPassword = () => {
     try {
       e.preventDefault();
       console.log(formState);
-      const res = await fetch(`http://localhost:3000/user/update`, {
+      const res = await fetch(`https://server-55n8.onrender.com/user/update`, {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formState),

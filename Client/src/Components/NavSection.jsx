@@ -5,7 +5,6 @@ import {
   Breadcrumb,
   BreadcrumbItem,
   BreadcrumbLink,
-  BreadcrumbSeparator,
 } from "@chakra-ui/react";
 import Search from "./Search";
 import CartSection from "./CartSection";

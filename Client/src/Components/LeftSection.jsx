@@ -66,6 +66,18 @@ const LeftSection = () => {
         </Link>
         <ChevronRightIcon />
       </Flex>
+      {/* <Flex align="center" wrap="wrap" p="1rem">
+        <Image
+          src="https://cdn-icons-png.flaticon.com/128/10951/10951869.png"
+          alt="fashion"
+          w="3.5rem"
+          h="3.5rem"
+        />
+        <Link fontSize="0.8rem" ml="0.8rem" onClick={() => navigate("/cloths")}>
+          All Products
+        </Link>
+        <ChevronRightIcon />
+      </Flex> */}
     </Box>
   );
 };

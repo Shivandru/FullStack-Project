@@ -9,6 +9,8 @@ import Toys from "../Pages/Toys";
 import Electronics from "../Pages/Electronics";
 import Grocery from "../Pages/Grocery";
 import Stationary from "../Pages/Stationary";
+import SearchResults from "../Pages/SearchResults";
+import MyOrders from "../Pages/MyOrders";
 const AllRoutes = () => {
   return (
     <div>
@@ -22,6 +24,8 @@ const AllRoutes = () => {
         <Route path="/electronics" element={<Electronics />} />
         <Route path="/grocery" element={<Grocery />} />
         <Route path="/stationary" element={<Stationary />} />
+        <Route path="/orders" element={<MyOrders />} />
+        <Route path="/searchResults" element={<SearchResults />} />
       </Routes>
     </div>
   );

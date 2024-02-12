@@ -7,7 +7,6 @@ import {
   Text,
   Flex,
   Tag,
-  useColorModeValue,
 } from "@chakra-ui/react";
 
 const ListHeader = ({ children }) => {
@@ -19,10 +18,7 @@ const ListHeader = ({ children }) => {
 };
 const Footer = () => {
   return (
-    <Box
-      bg={useColorModeValue("gray.50", "gray.900")}
-      color={useColorModeValue("gray.700", "gray.200")}
-    >
+    <Box bg="grey" color={"black"}>
       <Container as={Stack} maxW={"6xl"} py={10}>
         <SimpleGrid columns={{ base: 1, sm: 2, md: 4 }} spacing={8}>
           <Stack align={"flex-start"}>
@@ -36,7 +32,7 @@ const Footer = () => {
               </Box>
               <Tag
                 size={"sm"}
-                bg={useColorModeValue("green.300", "green.800")}
+                bg={("green.300", "green.800")}
                 ml={2}
                 color={"white"}
               >
@@ -115,14 +111,14 @@ const Footer = () => {
           _before={{
             content: '""',
             borderBottom: "1px solid",
-            borderColor: useColorModeValue("gray.200", "gray.700"),
+            borderColor: ("gray.200", "gray.700"),
             flexGrow: 1,
             mr: 8,
           }}
           _after={{
             content: '""',
             borderBottom: "1px solid",
-            borderColor: useColorModeValue("gray.200", "gray.700"),
+            borderColor: ("gray.200", "gray.700"),
             flexGrow: 1,
             ml: 8,
           }}
