@@ -7,10 +7,25 @@ const { ToysModel } = require("../Models/toys.model");
 const { ElectronicModel } = require("../Models/electronics");
 const { GroceryModel } = require("../Models/grocery");
 const { StationaryModel } = require("../Models/stationary");
+const { AllProductModel } = require("../Models/allproducts");
 
 productRouter.get("/", async (req, res) => {
   try {
     const product = await ProductModel.find();
+    res.status(200).send(product);
+  } catch (error) {
+    res.status(500).send({ msg: error.message });
+  }
+});
+
+productRouter.get("/search", async (req, res) => {
+  try {
+    const { title } = req.query;
+    const queryObj = {};
+    if (title) {
+      queryObj.title = { $regex: title, $options: "i" };
+    }
+    const product = await AllProductModel.find(queryObj).sort({ rating: -1 });
     res.status(200).send(product);
   } catch (error) {
     res.status(500).send({ msg: error.message });

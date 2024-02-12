@@ -104,8 +104,6 @@ userRouter.get("/logout", async (req, res) => {
     });
     await blacklistAccessToken.save();
     await blacklistRefreshToken.save();
-    // res.clearCookie("accessToken");
-    // res.clearCookie("refreshToken");
     res.status(200).send({ msg: "User logged out successfully" });
   } catch (error) {
     res.status(500).send({ error: error.message });
