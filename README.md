@@ -25,12 +25,12 @@ JD.com, Inc., also known as Jingdong, formerly called 360buy, is a Chinese e-com
 ![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white) 
 ![Chakra](https://img.shields.io/badge/chakra-%234ED1C5.svg?style=for-the-badge&logo=chakraui&logoColor=white) 
 ![Styled Components](https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white) 
-![Vercel](https://th.bing.com/th/id/OIP.ypz_d6GL7n2nXfQnbw_ARAHaFj?w=193&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7) 
+![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white) 
 ![NodeJs](https://img.shields.io/badge/Node%20js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
 ![Express](https://img.shields.io/badge/Express%20js-000000?style=for-the-badge&logo=express&logoColor=white)
 ![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
 ![JWT](https://img.shields.io/badge/JWT-000000?style=for-the-badge&logo=JSON%20web%20tokens&logoColor=white)
-![Render](https://th.bing.com/th/id/OIP.xNFYSq_usp-8cEPetUf3RAAAAA?w=330&h=72&c=7&r=0&o=5&dpr=1.3&pid=1.7)
+![Render](https://img.shields.io/badge/Render-46E3B7?style=for-the-badge&logo=render&logoColor=white)
 
 
 ## Screenshots
