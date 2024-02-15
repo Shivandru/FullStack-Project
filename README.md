@@ -1,6 +1,6 @@
-# FullStack-Project(JD-Clone)
 
 # JD Ecommerce Platform
+### FullStack-Project(JD-Clone)
 
 ![JD Logo](https://www.wipo.int/export/sites/www/ipadvantage/images/jd.com-joy-logo-845.png)
 
@@ -9,15 +9,13 @@ JD.com, Inc., also known as Jingdong, formerly called 360buy, is a Chinese e-com
 ## Features
 
 - **User Authentication**: Secure user authentication system to protect user data and enable personalized experiences.
-- **Product Management**: Easily add, edit, and delete products through the intuitive admin interface.
+- **Google OAuth**: User can login through Google.
 - **Shopping Cart**: Seamless shopping cart functionality for a smooth checkout process.
-- **Payment Integration**: Integration with popular payment gateways for secure and convenient transactions.
 - **Order Management**: Efficient order management system to track orders and manage inventory.
 - **Responsive Design**: Mobile-friendly design ensures a consistent experience across all devices.
 - **Search and Filtering**: Advanced search and filtering options for easy product discovery.
 - **Wishlist**: Allow users to save their favorite products for later purchase.
 - **Reviews and Ratings**: Enable customers to leave feedback and ratings for products.
-- **Admin Dashboard**: Comprehensive dashboard for monitoring sales, inventory, and user activity.
 
 # 💻 Tech Stack
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) 
@@ -27,11 +25,12 @@ JD.com, Inc., also known as Jingdong, formerly called 360buy, is a Chinese e-com
 ![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white) 
 ![Chakra](https://img.shields.io/badge/chakra-%234ED1C5.svg?style=for-the-badge&logo=chakraui&logoColor=white) 
 ![Styled Components](https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white) 
-![Netlify](https://img.shields.io/badge/netlify-%23000000.svg?style=for-the-badge&logo=netlify&logoColor=#00C7B7) 
+![Vercel](https://th.bing.com/th/id/OIP.ypz_d6GL7n2nXfQnbw_ARAHaFj?w=193&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7) 
 ![NodeJs](https://img.shields.io/badge/Node%20js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
 ![Express](https://img.shields.io/badge/Express%20js-000000?style=for-the-badge&logo=express&logoColor=white)
 ![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
 ![JWT](https://img.shields.io/badge/JWT-000000?style=for-the-badge&logo=JSON%20web%20tokens&logoColor=white)
+![Render](https://th.bing.com/th/id/OIP.xNFYSq_usp-8cEPetUf3RAAAAA?w=330&h=72&c=7&r=0&o=5&dpr=1.3&pid=1.7)
 
 
 ## Screenshots
@@ -46,23 +45,22 @@ JD.com, Inc., also known as Jingdong, formerly called 360buy, is a Chinese e-com
 
 To run Sears locally, follow these steps:
 
-1. Clone this repository: `git clone https://github.com/yourusername/sears.git`
-2. Navigate to the project directory: `cd sears`
+1. Clone this repository:
+2. Navigate to the project directory:
 3. Install dependencies for the server: `npm install`
-4. Navigate to the client directory: `cd client`
+4. Navigate to the client directory: `cd Client`
 5. Install dependencies for the client: `npm install`
 6. Return to the root directory: `cd ..`
-7. Start the server: `npm run server`
-8. Start the client: `npm run client`
+7. Start the server: `npm run dev`
+8. Start the client: `npm run dev`
 
 ## Usage
 
-- Visit the deployed site at [www.sears.com](https://www.sears.com)
+- Visit the deployed site at [www.JD.com](https://jdclone-shivandrus-projects.vercel.app/)
 - Sign up for an account or log in if you're an existing user.
 - Browse through the wide range of products available.
 - Add products to your cart and proceed to checkout.
-- Make secure payments using integrated payment gateways.
-- Track your orders and manage your account through the user dashboard.
+- Make dummy payments using payment gateways.
 
 ## Features Screenshot
 ![alt text](<client/src/assets/sears-screenshots/Screenshot 2024-02-12 232019.png>)
