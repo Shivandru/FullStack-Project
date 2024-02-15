@@ -22,6 +22,7 @@ JD.com, Inc., also known as Jingdong, formerly called 360buy, is a Chinese e-com
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) 
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) 
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) 
+![Redux](https://img.shields.io/badge/Redux-593D88?style=for-the-badge&logo=redux&logoColor=white) 
 ![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white) 
 ![Chakra](https://img.shields.io/badge/chakra-%234ED1C5.svg?style=for-the-badge&logo=chakraui&logoColor=white) 
 ![Styled Components](https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white) 
@@ -36,8 +37,7 @@ JD.com, Inc., also known as Jingdong, formerly called 360buy, is a Chinese e-com
 ## Screenshots
 
 
-![Screenshot 1](<client/src/assets/sears-screenshots/Screenshot 2024-02-12 231550.png>)
-![Screenshot 2](<client/src/assets/sears-screenshots/Screenshot 2024-02-12 231858.png>)
+![Screenshot 1](<https://i.ibb.co/1TCCz0j/screencapture-jdclone-shivandrus-projects-vercel-app-2024-02-15-12-15-54.png>)
 
 
 
@@ -82,9 +82,6 @@ We welcome contributions from the community! If you have any suggestions for imp
 - Implement a recommendation system based on user preferences.
 - Expand admin dashboard features for better analytics and management.
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Acknowledgements
 
@@ -93,4 +90,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Contact
 
-For any inquiries or support, please contact our team at contact@sears.com.
+For any inquiries or support, please contact our team at contact@jd.com
