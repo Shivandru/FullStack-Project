@@ -34,7 +34,7 @@ JD.com, Inc., also known as Jingdong, formerly called 360buy, is a Chinese e-com
 ![Render](https://img.shields.io/badge/Render-46E3B7?style=for-the-badge&logo=render&logoColor=white)
 
 
-## Screenshots
+## Screenshot of home
 
 
 ![Screenshot 1](<https://i.ibb.co/1TCCz0j/screencapture-jdclone-shivandrus-projects-vercel-app-2024-02-15-12-15-54.png>)
@@ -63,12 +63,12 @@ To run Sears locally, follow these steps:
 - Make dummy payments using payment gateways.
 
 ## Features Screenshot
-![alt text](<client/src/assets/sears-screenshots/Screenshot 2024-02-12 232019.png>)
-![alt text](<client/src/assets/sears-screenshots/Screenshot 2024-02-12 232019.png>)
-![alt text](<client/src/assets/sears-screenshots/Screenshot 2024-02-12 232043.png>)
-![alt text](<client/src/assets/sears-screenshots/Screenshot 2024-02-12 232123.png>)
-![alt text](<client/src/assets/sears-screenshots/Screenshot 2024-02-12 232123.png>)
-![alt text](<client/src/assets/sears-screenshots/Screenshot 2024-02-12 232155.png>)
+![Search](<https://i.ibb.co/TW4DyK6/Screenshot-2024-02-15-122318.png>)
+![alt text](<>)
+![alt text](<>)
+![alt text](<>)
+![alt text](<>)
+![alt text](<>)
 
 ## Contributing
 
