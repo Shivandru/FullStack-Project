@@ -64,11 +64,12 @@ To run Sears locally, follow these steps:
 
 ## Features Screenshot
 ![Search](<https://i.ibb.co/TW4DyK6/Screenshot-2024-02-15-122318.png>)
-![alt text](<>)
-![alt text](<>)
-![alt text](<>)
-![alt text](<>)
-![alt text](<>)
+![Cart](<https://i.ibb.co/3dqDKnM/Screenshot-2024-02-15-122728.png>)
+![Login](<https://i.ibb.co/wdnfQ37/screencapture-jdclone-shivandrus-projects-vercel-app-login-2024-02-15-12-29-09.png>)
+![Confirm Password](<https://i.ibb.co/C84DHMr/screencapture-jdclone-shivandrus-projects-vercel-app-resetpassword-2024-02-15-12-30-59.png>)
+![Register](<https://i.ibb.co/6JWFr2w/screencapture-jdclone-shivandrus-projects-vercel-app-register-2024-02-15-12-32-41.png>)
+![Google OAuth](<https://i.ibb.co/8Bj53zw/screencapture-accounts-google-o-oauth2-v2-auth-oauthchooseaccount-2024-02-15-12-35-02.png>)
+![Dummy Payment](<https://i.ibb.co/7vJYQtL/screencapture-jdclone-shivandrus-projects-vercel-app-orders-2024-02-15-12-37-36.png>)
 
 ## Contributing
 
